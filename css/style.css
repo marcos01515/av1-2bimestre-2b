@@ -1,24 +1,73 @@
 /* Estilização personalizada para o projeto Av1 DWB */
 :root {
-  --bg: #f8f9fa;
-  --card: #ffffff;
-  --border: #dee2e6;
-  --text-dark: #212529;
-  --primary: #0d6efd;
+  --bg: #0f172a;
+  --surface: #ffffff;
+  --card: rgba(255, 255, 255, 0.92);
+  --border: rgba(148, 163, 184, 0.2);
+  --text-dark: #0f172a;
+  --text-light: #f8fafc;
+  --primary: #4f46e5;
+  --secondary: #0ea5e9;
+  --accent: #f97316;
+  --muted: #475569;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(180deg, #eef2ff 0%, #f8f9fa 100%);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.16), transparent 34%),
+              radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.12), transparent 28%),
+              linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
   color: var(--text-dark);
   min-height: 100vh;
 }
 
-header {
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), transparent 45%);
+  pointer-events: none;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.detail-header {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.95), rgba(14, 165, 233, 0.92));
+  color: var(--text-light);
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header-content h1,
+.header-content p {
+  color: inherit;
+}
+
+.badge-pill {
+  border-radius: 999px;
+  font-size: 0.85rem;
+  padding: 0.65rem 0.95rem;
+}
+
+main {
+  padding-bottom: 3rem;
 }
 
 #feedback {
-  min-height: 60px;
+  min-height: 80px;
 }
 
 .spinner-area,
@@ -27,66 +76,110 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 160px;
-  background: rgba(255, 255, 255, 0.75);
+  min-height: 170px;
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08);
 }
 
 .error-message {
-  color: #842029;
-  background: #f8d7da;
-  border-color: #f5c2c7;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-color: #fecaca;
 }
 
 .card-custom {
   border: 1px solid var(--border);
-  border-radius: 18px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--card);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .card-custom:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.16);
 }
 
 .card-custom img {
   object-fit: cover;
-  height: 260px;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  height: 280px;
+  width: 100%;
 }
 
 .card-body {
-  padding: 1.3rem;
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.card-text {
+  color: var(--muted);
+}
+
+.card-footer {
+  background: transparent;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  font-size: 0.95rem;
 }
 
 .detail-card {
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+  border-radius: 28px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.09);
 }
 
 .detail-card img {
   width: 100%;
-  max-width: 360px;
-  border-radius: 18px;
+  max-width: 420px;
+  border-radius: 26px;
 }
 
 .list-label {
-  font-weight: 600;
-  color: #495057;
+  font-weight: 700;
+  color: var(--muted);
 }
 
 .btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.18);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #4338ca, #0ea5e9);
+}
+
+.btn-outline-secondary {
   border-radius: 999px;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  color: #0f172a;
 }
 
 @media (max-width: 767px) {
   .card-custom img {
-    height: 220px;
+    height: 240px;
+  }
+
+  .detail-card {
+    padding: 1.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-header,
+  .detail-header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
