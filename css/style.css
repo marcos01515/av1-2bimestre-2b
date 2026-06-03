@@ -1,0 +1,92 @@
+/* Estilização personalizada para o projeto Av1 DWB */
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --border: #dee2e6;
+  --text-dark: #212529;
+  --primary: #0d6efd;
+}
+
+body {
+  background: linear-gradient(180deg, #eef2ff 0%, #f8f9fa 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+header {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+#feedback {
+  min-height: 60px;
+}
+
+.spinner-area,
+.error-message,
+.empty-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.error-message {
+  color: #842029;
+  background: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+.card-custom {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
+}
+
+.card-custom img {
+  object-fit: cover;
+  height: 260px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.card-body {
+  padding: 1.3rem;
+}
+
+.detail-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
+.detail-card img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 18px;
+}
+
+.list-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.btn-primary {
+  border-radius: 999px;
+}
+
+@media (max-width: 767px) {
+  .card-custom img {
+    height: 220px;
+  }
+}

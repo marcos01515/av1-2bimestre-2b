@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Ditto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Pokémons da PokeAPI</h1>
+    <p>Clique em um Pokémon para ver as informações na tela inicial.</p>
+    <section class="pokemon-grid card">
+      <h2>Escolha um Pokémon</h2>
+      <div class="pokemon-buttons">
+        <button type="button" class="pokemon-button" data-pokemon="ditto">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Ditto" />
+          <span>Ditto</span>
+        </button>
+        <button type="button" class="pokemon-button" data-pokemon="pikachu">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu" />
+          <span>Pikachu</span>
+        </button>
+        <button type="button" class="pokemon-button" data-pokemon="charmander">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander" />
+          <span>Charmander</span>
+        </button>
+        <button type="button" class="pokemon-button" data-pokemon="bulbasaur">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur" />
+          <span>Bulbasaur</span>
+        </button>
+      </div>
+    </section>
+    <section id="pokemon-card" class="card">
+      <div id="loading">Clique em um Pokémon acima para ver os detalhes.</div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
