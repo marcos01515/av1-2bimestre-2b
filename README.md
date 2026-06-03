@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Projeto de Desenvolvimento Web que consome a API pública Rick and Morty para exibir uma lista dinâmica de personagens e uma página de detalhes com informações adicionais.
+Projeto de Desenvolvimento Web que consome a API pública Rick and Morty para exibir uma lista de personagens na página principal e os detalhes de cada personagem em uma página dedicada.
 
 ## Tecnologias utilizadas
 
@@ -15,14 +15,12 @@ Projeto de Desenvolvimento Web que consome a API pública Rick and Morty para ex
 
 ## Funcionalidades
 
-- Busca de personagens por nome.
-- Filtros por status e gênero.
-- Paginação entre páginas da API.
-- Cards responsivos com imagem, species, status e origem.
-- Visualização rápida de episódios clicando no botão "Episódios" no card.
-- Página de detalhes com origem, localização, dimensão, tipo de local e episódios.
-- Feedback visual de carregamento e tratamento de erros.
-- Navegação moderna com layout responsivo.
+- Busca de dados em uma API pública.
+- Exibição de cards responsivos com imagem, nome e botão de detalhes.
+- Redirecionamento para `detalhes.html?id=ID_DO_ITEM` ao clicar em "Ver detalhes".
+- Leitura de parâmetro `id` via `URLSearchParams`.
+- Exibição de foto, nome, espécie, status, gênero, origem, localização e número de episódios.
+- Feedback visual de carregamento e mensagens de erro amigáveis.
 
 ## Estrutura de pastas
 
@@ -41,11 +39,11 @@ av1-dwb-nome-sobrenome-2bimestre/
 ## Como executar localmente
 
 1. Abra a pasta do projeto no seu editor ou IDE preferido.
-2. Abra o arquivo `index.html` diretamente no navegador.
-3. Use a busca e os filtros para explorar personagens.
-4. Clique em "Ver detalhes" para acessar a página de detalhes.
+2. Abra o arquivo `index.html` no navegador.
+3. A página carregará automaticamente os personagens da API Rick and Morty.
+4. Clique em "Ver detalhes" para navegar até a página de detalhes de um personagem.
 
-> Observação: basta ter acesso à internet para consumir a API Rick and Morty.
+> Observação: não é necessário backend, somente um navegador com acesso à internet.
 
 ## API utilizada
 
